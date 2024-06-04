@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+body {
+    font-family: 'Playfair Display', serif !important;
+}
+
+/* header css start */
+:root {
+  --bold: 'Oswald', sans-serif;
+  --abril: 'Abril Fatface', serif;
+  --serif: 'Playfair Display', serif;
+  --white: #ffffff;
+  --main: #92BFB1;
+  --dark: #333333;
+  --ease-slow: all .4s ease-out;
+}
+
+body {
+  margin: 0;
+  background: lighten(var(--main), 10%);
+}
+
+a {
+  text-decoration: none;
+  color: var(--main);
+}
+
+a:hover {
+  background: var(--main);
+  color: var(--dark);
+}
+
+.sticky {
+  position: fixed;
+  z-index: 10;
+}
+
+.navbar--container {
+  top: 10px;
+  left: 10px;
+  z-index: 9999;
+}
+
+.navbar--icon {
+  font-size: 1.5em;
+  color: black;
+  cursor: pointer;
+}
+
+.navbar--icon:hover {
+  color: var(--dark);
+}
+
+.navbar-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  background-color: #fff; /* Adjust as needed */
+  padding: 10px 20px; /* Adjust padding as needed */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Example shadow, adjust as needed */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px; /* Fixed height for the navbar */
+  z-index: 9999; /* Ensure it appears above other content */
+}
+
+
+.navbar--icon {
+  cursor: pointer;
+}
+
+.navbar--logo img {
+  width: 200px; /* Adjust the width as needed */
+  height: auto; /* Let the height adjust proportionally */
+}
+
+
+.navbar--user {
+  cursor: pointer;
+}
+
+.navbar--title {
+  margin-left: 27px;
+  margin-top: 35px;
+}
+
+.navbar--title h4 {
+  writing-mode: vertical-rl;
+  font-family: var(--bold);
+  letter-spacing: .34em;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+
+.nav--open, .nav--open2 {
+  max-height: 100%;
+  overflow-y: auto; 
+  width: 300px;
+  background: var(--white);
+  transition: var(--ease-slow);
+  opacity: 1;
+  box-shadow: 2px 2px 15px rgba(var(--dark), .1);
+  height: 100vh;
+}
+
+.nav--open-icon, .nav--open-icon2 {
+  text-align: right;
+  padding: 20px;
+}
+
+.nav--open-icon i, .nav--open-icon2 i {
+  font-size: 1.8em;
+  color: black;
+}
+
+.nav--open-icon i:hover , .nav--open-icon2 i:hover{
+  color: var(--dark);
+  cursor: pointer;
+}
+.nav--open-menu {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 0;
+}
+
+.nav--open-menu a{
+  font-size: 1.5em; /* Decrease font size */
+  font-weight: 100;
+  font-family: var(--serif);
+  padding: 15px 0;
+  color: black; /* Change font color */
+}
+
+.close {
+  transform: translateX(-300px);
+  transition: var(--ease-slow);
+  opacity: 0;
+  
+}
+/* header css end */
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 60px); /* Subtracting the height of the navbar */
+  margin-top: 60px; /* Height of the navbar */
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Adjusted property */
+}
+.buildbtna{
+  background-color: inherit;
+  text-decoration: none !important;
+
+}
+#buildbtna:hover {
+  text-decoration: none; /* Remove underline when hovering over the link */
+}
+
+#buildbtna .buildbtn:hover {
+  background-color: inherit; /* Keep original background color when hovering */
+}
+
+
+#stopButton {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.offers-section {
+  margin-top: 60px;
+}
+
+
+.offer-card {
+  overflow: hidden;
+  position: relative;
+  justify-content: space-between;
+  width: 100%; /* Adjust width as needed */
+}
+
+.offer-card .card {
+  width: 100%; }
+
+
+.offer-card:hover img {
+  transform: scale(1.15);
+  transition: all 1s;
+}
+
+.btn-transparent {
+  background-color: transparent;
+  border: none;
+}
+
+
+.Models_heading{
+   font-weight: bolder;
+   font-size: xx-large;
+   margin-top: 60px;
+}
+
+
+.model_cards {
+    margin: 10px auto;
+    position: relative;
+    border-radius: 15px !important;
+    overflow: hidden !important;
+}
+
+.model_cards img {
+    height: 100%;
+}
+
+.carname {
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: rgb(255, 255, 255);
+    font-style: italic;
+    position: absolute;
+    top: 0px;
+    left: 10px;
+}
+
+.cardesc {
+    position: absolute;
+    bottom: 0px;
+    left: 10px;
+    padding-left: 1.15rem;
+    padding-right: 2rem;
+    padding-bottom: 0px;
+}
+
+.desctxt {
+    font-weight: 500;
+    font-size: 1.5rem;
+
+}
+
+.carprice {
+    color: white;
+    font-size: 1.15rem;
+    font-weight: 300;
+}
+
+
+
+.buildbtn {
+
+    color: black !important;
+    font-size: 1.05rem;
+    font-weight: 100;
+    height: 3rem;
+    
+    background-color: white !important ;
+
+
+}
+
+.transparent-btn {
+    background-color: transparent !important;
+    border: 1px solid white !important;
+    color: white !important;
+    text-align: center !important;
+    font-size: 1.05rem !important;
+    font-weight: 100 !important;
+    height: 3rem !important;
+   
+}
+
+.transparent-btn:hover {
+    background-color: rgba(35, 58, 83, 0.463);
+   
+    border: 1px solid white !important;
+    color: white !important;
+    
+}
+
+.taxdesc{
+    font-size: 0.70rem !important;
+    color: rgba(0, 0, 0, 0.745) !important;
+    padding-left: 1.5rem ;
+    padding-top: 1.5rem;
+    padding-bottom: 10rem;
+}
+.findcenter{
+    background-color: black !important;
+    width: 100%;
+    height: 100%;
+    padding-top: 4rem !important;
+    padding-left: 4rem !important;
+    padding-right: 4rem !important;
+}
+
+.dealercard{
+    color: white !important;
+    border-radius: 25px !important;
+    overflow: hidden;
+}
+.dealersearchbtn{
+    font-size: 1.05rem;font-weight: 100;height: 3rem;
+}
+@media (max-width: 992px) {
+    .dealersearchbtn {
+      display: block !important;
+      width: 100%;
+      
+    }
+    
+  }
+  
+
+  @media (max-width: 1200px) {
+    .offer-card .card-text {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .offer-card .card-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .offer-card .card-text {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .offer-card .card-text {
+        font-size: 0.8rem;
+    }
+    
+    .mb-4 {
+        margin-bottom: 1rem; /* Added margin for smaller screens */
+    }
+}

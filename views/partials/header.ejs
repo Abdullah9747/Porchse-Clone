@@ -1,0 +1,33 @@
+<div class="navbar-wrapper">
+  <div class="navbar--icon"><i class="fas fa-bars"></i></div>
+<div class="navbar--logo"><a href="/" style="text-decoration: none; background-color: inherit;"><img src="/porsche-main-logo/porsche-logo.png"></a></div>
+  <div class="navbar--user"><a href="/login" style="text-decoration: none; color: black;"><i
+        class="fas fa-user"></i></a>
+  </div>
+
+
+</div>
+
+
+<div class="nav--open close sticky">
+  <div class="nav--open-icon"><i class="fas fa-times"></i></div>
+  <div class="nav--open-menu">
+    <a href="#" class="services_dropdown">Models</a>
+    <a href="#">Shopping Tools</a>
+    <a href="#">Services</a>
+    <a href="#">Experience</a>
+    <a href="#">Find Your Porsche Center</a>
+    <a href="#">Your Porsche</a>
+  </div>
+</div>
+
+<div class="nav--open2 close sticky">
+  <div class="nav--open-icon2"><i class="fas fa-times"></i></div>
+  <div class="nav--open-menu">
+    <div class="nav--open-menu">
+      <% cars.forEach((cars, index) => { %>
+        <a href="/buildcar?index=<%= index %>"><%= cars.name %></a>
+      <% }); %>
+    </div>
+  </div>
+</div>
